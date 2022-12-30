@@ -17,6 +17,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - flit-core
     - mistune >=2.0,<3.0
     - docutils >=0.16,<1.0
     - pygments >=2.8
