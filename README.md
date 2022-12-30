@@ -9,6 +9,10 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-mdinclud
 
 Summary: Sphinx extension for including or writing pages in Markdown format.
 
+Development: https://github.com/omnilib/sphinx-mdinclude
+
+Documentation: https://sphinx-mdinclude.readthedocs.io
+
 Current build status
 ====================
 
@@ -144,4 +148,5 @@ Feedstock Maintainers
 =====================
 
 * [@hmaarrfk](https://github.com/hmaarrfk/)
+* [@tdegeus](https://github.com/tdegeus/)
 
