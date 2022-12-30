@@ -1,9 +1,6 @@
 {% set version = "0.5.3" %}
 
 package:
-  # pypi package uses underscore. however, I believe that conda-forge
-  # prefers dashes
-  # https://pypi.org/project/sphinx_mdinclude/
   name: sphinx-mdinclude
   version: {{ version }}
 
@@ -12,34 +9,28 @@ source:
   sha256: 2998e3d18b3022c9983d1b72191fe37e25ffccd54165cbe3acb22cceedd91af4
 
 build:
+  number: 1
   noarch: python
-  script:
-    # - rm -f pyproject.toml
-    - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3.8
     - pip
-    - flit-core
-    # flit seems to import things, so duplicate all dependencies here
-    - mistune >=2.0,<3.0.0.0a
-    - docutils >=0.16,<1.0.0a
+    - mistune >=2.0,<3.0
+    - docutils >=0.16,<1.0
     - pygments >=2.8
-    - docutils
   run:
     - python >=3.8
-    - mistune >=2.0,<3.0.0.0a
-    - docutils >=0.16,<1.0.0a
+    - mistune >=2.0,<3.0
+    - docutils >=0.16,<1.0
     - pygments >=2.8
-    - docutils
 
 test:
-  imports:
-    - sphinx_mdinclude
   requires:
     - pip
+  imports:
+    - sphinx_mdinclude
   commands:
     - pip check
 
@@ -49,7 +40,10 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
+  doc_url: https://sphinx-mdinclude.readthedocs.io
+  dev_url: https://github.com/omnilib/sphinx-mdinclude
 
 extra:
   recipe-maintainers:
     - hmaarrfk
+    - tdegeus
