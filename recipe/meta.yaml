@@ -1,4 +1,4 @@
-{% set version = "0.5.4" %}
+{% set version = "0.6.0" %}
 
 package:
   name: sphinx-mdinclude
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sphinx_mdinclude/sphinx_mdinclude-{{ version }}.tar.gz
-  sha256: 4a58c8f02e95a2b7ba0eb77a851e096e42c66958f9f7ffe575e427cf659e1789
+  sha256: b1cb4dfa22ce17ca20e90e34d4349d8a97c5052709d9c4eed051cdabb615b20b
 
 build:
   number: 0
@@ -18,14 +18,16 @@ requirements:
     - python >=3.8
     - pip
     - flit-core
-    - mistune >=2.0,<3.0
+    - mistune >=3.0,<4.0
     - docutils >=0.16,<1.0
     - pygments >=2.8
   run:
     - python >=3.8
-    - mistune >=2.0,<3.0
+    - mistune >=3.0,<4.0
     - docutils >=0.16,<1.0
     - pygments >=2.8
+    # They depend on sphinx, they just don't know it
+    - sphinx
 
 test:
   requires:
