@@ -1,4 +1,4 @@
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: sphinx-mdinclude
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sphinx_mdinclude/sphinx_mdinclude-{{ version }}.tar.gz
-  sha256: b1cb4dfa22ce17ca20e90e34d4349d8a97c5052709d9c4eed051cdabb615b20b
+  sha256: ece3d812e2d559b4e7e47f67b6a87b0e2a689b6b2f5114795c8ed47ffb39c169
 
 build:
   number: 0
